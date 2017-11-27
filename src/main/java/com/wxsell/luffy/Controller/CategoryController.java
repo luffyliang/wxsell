@@ -15,17 +15,17 @@ import java.util.Map;
  * @Date:Created in :16:33 2017/11/23
  * @Description:
  **/
-@Controller
+@RestController
 @RequestMapping("/seller")
 public class CategoryController {
      @Autowired
     CategoryService categoryService;
 
     @RequestMapping(value="/{id}",method= RequestMethod.GET)
-    public String list(@PathVariable("id") Integer id, Map<String,Object> map){
+    public Category list(@PathVariable("id") Integer id, Map<String,Object> map){
         Category category =categoryService.findOne(id);
         map.put("name",category.getCategoryName());
-        return "category";
+        return category;
     }
 
 }
