@@ -15,7 +15,7 @@ import java.util.Map;
  * @Date:Created in :16:33 2017/11/23
  * @Description:
  **/
-@RestController
+@Controller
 @RequestMapping("/seller")
 public class CategoryController {
      @Autowired
