@@ -1,7 +1,7 @@
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://10.170.11.115/sell?characterEncoding=utf-8&useSSL=false
+        url: jdbc:mysql://10.170.58.234/sell?characterEncoding=utf-8&useSSL=false
         username: root
         password: 123456
 
@@ -20,6 +20,15 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
+    mvc:
+        view:
+          prefix : /WEB-INF/jsp/
+          suffix: .jsp
 mybatis:
     mapper-Locations: classpath:mapping/*.xml
     typeAliasesPackage: com.wxsell.luffy
+# 页面默认前缀目录
+
+
+
+
