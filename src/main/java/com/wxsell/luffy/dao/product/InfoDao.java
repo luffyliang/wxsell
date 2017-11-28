@@ -3,8 +3,10 @@ package com.wxsell.luffy.dao.product;
 import com.wxsell.luffy.pojo.product.Info;
 import com.wxsell.luffy.pojo.product.InfoQuery;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface InfoDao {
     int countByExample(InfoQuery example);
 

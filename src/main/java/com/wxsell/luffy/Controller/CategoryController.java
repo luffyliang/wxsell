@@ -22,9 +22,9 @@ public class CategoryController {
     CategoryService categoryService;
 
     @RequestMapping(value="/{id}",method= RequestMethod.GET)
-    public Category list(@PathVariable("id") Integer id, Map<String,Object> map){
+    public Category list(@PathVariable("id") Integer id){
         Category category =categoryService.findOne(id);
-        map.put("name",category.getCategoryName());
+       // map.put("name",category.getCategoryName());
         return category;
     }
 
