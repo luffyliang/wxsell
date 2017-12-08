@@ -16,6 +16,8 @@ public class ProductInfoServiceImpl implements ProductInfoService {
    @Autowired
    InfoDao infoDao;
     public Info findOne(String id){
-      return  infoDao.selectByPrimaryKey(id);
+
+        return  infoDao.selectByPrimaryKey(id);
+
     };
 }

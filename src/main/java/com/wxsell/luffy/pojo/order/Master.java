@@ -1,10 +1,17 @@
 package com.wxsell.luffy.pojo.order;
 
+
+import com.wxsell.luffy.enums.OrderStatusEnum;
+import com.wxsell.luffy.enums.PayStatusEnum;
+import org.springframework.data.annotation.Id;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 public class Master implements Serializable {
+
+    @Id
     private String orderId;
 
     /**
@@ -35,12 +42,12 @@ public class Master implements Serializable {
     /**
      * 订单状态，默认0未支付
      */
-    private Byte orderStatus;
+    private Integer orderStatus = OrderStatusEnum.NEW.getCode();
 
     /**
      * 订单状态，默认0未支付
      */
-    private Byte payStatus;
+    private Integer payStatus =  PayStatusEnum.WAIT.getCode();
 
     /**
      * 创建时间
@@ -51,6 +58,9 @@ public class Master implements Serializable {
      * 修改时间
      */
     private Date updateTime;
+
+
+    //private List<Detail> orderDetailList;
 
     private static final long serialVersionUID = 1L;
 
@@ -102,19 +112,19 @@ public class Master implements Serializable {
         this.orderAmount = orderAmount;
     }
 
-    public Byte getOrderStatus() {
+    public Integer getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(Byte orderStatus) {
+    public void setOrderStatus(Integer orderStatus) {
         this.orderStatus = orderStatus;
     }
 
-    public Byte getPayStatus() {
+    public Integer getPayStatus() {
         return payStatus;
     }
 
-    public void setPayStatus(Byte payStatus) {
+    public void setPayStatus(Integer payStatus) {
         this.payStatus = payStatus;
     }
 

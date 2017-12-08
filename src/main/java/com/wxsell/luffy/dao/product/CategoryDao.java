@@ -2,10 +2,10 @@ package com.wxsell.luffy.dao.product;
 
 import com.wxsell.luffy.pojo.product.Category;
 import com.wxsell.luffy.pojo.product.CategoryQuery;
-import java.util.List;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 @Mapper
 public interface CategoryDao {
     int countByExample(CategoryQuery example);

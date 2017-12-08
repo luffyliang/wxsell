@@ -1,18 +1,12 @@
 package com.wxsell.luffy.Controller;
 
-import com.wxsell.luffy.Service.CategoryService;
 import com.wxsell.luffy.Service.ProductInfoService;
-import com.wxsell.luffy.pojo.product.Category;
 import com.wxsell.luffy.pojo.product.Info;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * @Author:luffyhongliang
